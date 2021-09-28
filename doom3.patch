@@ -1,0 +1,30 @@
+diff --git a/neo/CMakeLists.txt b/neo/CMakeLists.txt
+index d42190f..43c3333 100644
+--- a/neo/CMakeLists.txt
++++ b/neo/CMakeLists.txt
+@@ -29,7 +29,7 @@ endif()
+ 
+ option(LINUX_RELEASE_BINS "Set RPATH to \$ORIGIN/libs/ for Linux binary releases" OFF)
+ 
+-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/sys/cmake")
++list (APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/sys/cmake")
+ 
+ if(LINUX_RELEASE_BINS)
+ 	message(STATUS "Setting RPATH to \$ORIGIN/libs/ so you can put dependencies in there")
+diff --git a/neo/sys/posix/posix_main.cpp b/neo/sys/posix/posix_main.cpp
+index 58c878f..ced415d 100644
+--- a/neo/sys/posix/posix_main.cpp
++++ b/neo/sys/posix/posix_main.cpp
+@@ -401,10 +401,12 @@ int Sys_GetDriveFreeSpace( const char *path ) {
+ static const int   crashSigs[]     = {  SIGILL,   SIGABRT,   SIGFPE,   SIGSEGV };
+ static const char* crashSigNames[] = { "SIGILL", "SIGABRT", "SIGFPE", "SIGSEGV" };
+ 
++#if 0
+ #if ( defined(__linux__) && defined(__GLIBC__) ) || defined(__FreeBSD__) || defined(__APPLE__)
+   #define D3_HAVE_BACKTRACE
+   #include <execinfo.h>
+ #endif
++#endif
+ 
+ #ifdef D3_HAVE_LIBBACKTRACE
+ // non-ancient versions of GCC and clang include libbacktrace
