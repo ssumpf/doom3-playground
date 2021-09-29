@@ -1,0 +1,10 @@
+ssumpf/src/libc
+ssumpf/src/openal
+ssumpf/src/zlib
+ssumpf/src/sdl2
+ssumpf/src/stdcxx
+ssumpf/src/vfs
+ssumpf/src/mesa
+ssumpf/src/libiconv
+ssumpf/src/expat
+ssumpf/src/libdrm

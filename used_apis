@@ -4,5 +4,3 @@ ssumpf/api/stdcxx
 ssumpf/api/zlib
 ssumpf/api/sdl2
 ssumpf/api/openal
-ssumpf/src/libc
-ssumpf/src/stdcxx
