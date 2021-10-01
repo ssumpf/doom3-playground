@@ -4,6 +4,7 @@ ssumpf/src/zlib
 ssumpf/src/sdl2
 ssumpf/src/stdcxx
 ssumpf/src/vfs
+ssumpf/src/vfs_lxip
 ssumpf/src/mesa
 ssumpf/src/libiconv
 ssumpf/src/expat

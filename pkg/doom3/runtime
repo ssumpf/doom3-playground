@@ -1,15 +1,47 @@
-<runtime ram="1G" caps="1000" binary="dhewm3">
+<runtime ram="2G" caps="8000" binary="dhewm3">
+	<requires>
+		<gui/>
+		<nic label="tap0"/>
+		<rom label="egl_drv.lib.so"/>
+	</requires>
+
 	<config>
-		<libc stdout="/dev/log" stderr="/dev/log"/>
+		<env key="HOME" value="/"/>
+		<libc stdout="/dev/log" stderr="/dev/log" rtc="/dev/rtc" socket="/socket"/>
 		<vfs>
-			<dir name="dev">
+			<dir name="dev"><inline name="rtc">2021-09-30 00:00</inline>
 				<log/>
+			</dir>
+			<dir name="socket"> <lxip dhcp="yes"/> </dir>
+			<dir name="usr">
+				<dir name="local">
+					<dir name="share">
+						<dir name="dhewm3">
+							<dir name="base">
+								<rom name="default.cfg"/>
+								<rom name="pak000.pk4"/>
+								<rom name="pak001.pk4"/>
+								<rom name="pak002.pk4"/>
+								<rom name="pak003.pk4"/>
+								<rom name="pak004.pk4"/>
+								<rom name="pak005.pk4"/>
+								<rom name="pak006.pk4"/>
+								<rom name="pak007.pk4"/>
+								<rom name="pak008.pk4"/>
+							</dir>
+						</dir>
+					</dir>
+				</dir>
 			</dir>
 		</vfs>
 	</config>
 
 	<content>
+		<!-- game files -->
 		<rom label="dhewm3"/>
+		<rom label="base.so"/>
+
+		<!-- Genode -->
 		<rom label="libc.lib.so"/>
 		<rom label="libm.lib.so"/>
 		<rom label="stdcxx.lib.so"/>
@@ -17,11 +49,26 @@
 		<rom label="sdl2.lib.so"/>
 		<rom label="openal.lib.so"/>
 		<rom label="vfs.lib.so"/>
+		<rom label="vfs_lxip.lib.so"/>
+		<rom label="lxip.lib.so"/>
 		<rom label="egl.lib.so"/>
 		<rom label="mesa.lib.so"/>
 		<rom label="glapi.lib.so"/>
 		<rom label="libiconv.lib.so"/>
 		<rom label="expat.lib.so"/>
 		<rom label="libdrm.lib.so"/>
+
+		<!-- game data -->
+		<rom label="default.cfg"/>
+		<rom label="pak000.pk4"/>
+		<rom label="pak001.pk4"/>
+		<rom label="pak002.pk4"/>
+		<rom label="pak003.pk4"/>
+		<rom label="pak004.pk4"/>
+		<rom label="pak005.pk4"/>
+		<rom label="pak006.pk4"/>
+		<rom label="pak007.pk4"/>
+		<rom label="pak008.pk4"/>
+
 	</content>
 </runtime>
