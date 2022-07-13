@@ -9,3 +9,4 @@ ssumpf/src/mesa
 ssumpf/src/libiconv
 ssumpf/src/expat
 ssumpf/src/libdrm
+ssumpf/src/vfs_gpu
