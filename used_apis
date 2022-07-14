@@ -1,6 +1,6 @@
-ssumpf/api/base
-ssumpf/api/libc
-ssumpf/api/stdcxx
-ssumpf/api/zlib
-ssumpf/api/sdl2
-ssumpf/api/openal
+<depot user>/api/base
+<depot user>/api/libc
+<depot user>/api/stdcxx
+<depot user>/api/zlib
+<depot user>/api/sdl2
+<depot user>/api/openal
