@@ -38,7 +38,8 @@ Building
 # Build and export dhewm3 to Genode depot from this directory
   ! goa export
 
-# How to integrate this into Sculpt OS is up to the developer
+# How to integrate this into Sculpt OS is up to the developer. Currently, you
+  have to rebuild Sculpt because of ongoing Intel GPU driver changes ;)
 
 # The game expects a 'games' file system where the '*.pk4' files and the
   'default.cfg' reside within the 'base' directory.
