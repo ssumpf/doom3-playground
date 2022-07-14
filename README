@@ -43,6 +43,6 @@ Building
 # The game expects a 'games' file system where the '*.pk4' files and the
   'default.cfg' reside within the 'base' directory.
 
-This all is highly experimental, so use it at your won risk.
+This all is highly experimental, so use it at your own risk.
 
 Have fun!
