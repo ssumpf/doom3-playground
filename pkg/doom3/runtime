@@ -6,6 +6,8 @@
 		<file_system label="games"/>
 		<rm/>
 		<gpu/>
+		<audio_in/>
+		<audio_out/>
 	</requires>
 
 	<config>
@@ -13,7 +15,7 @@
 		<libc stdout="/dev/log" stderr="/dev/log" rtc="/dev/rtc" socket="/socket"/>
 		<vfs>
 			<dir name="dev"><inline name="rtc">2021-09-30 00:00</inline>
-				<log/> <gpu/>
+				<log/> <gpu/> <oss name="dsp"/>
 			</dir>
 			<dir name="socket"> <lxip dhcp="yes"/> </dir>
 			<dir name="usr">
@@ -43,6 +45,7 @@
 		<rom label="vfs.lib.so"/>
 		<rom label="vfs_gpu.lib.so"/>
 		<rom label="vfs_lxip.lib.so"/>
+		<rom label="vfs_oss.lib.so"/>
 		<rom label="lxip.lib.so"/>
 		<rom label="egl.lib.so"/>
 		<rom label="mesa.lib.so"/>
