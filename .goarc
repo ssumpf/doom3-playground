@@ -1,6 +1,6 @@
-set versions_from_genode_dir <path to genode source repo>
+set versions_from_genode_dir /home/cbass/src/genode/genode.git
 set depot_dir                [file join $versions_from_genode_dir depot]
 set public_dir               [file join $versions_from_genode_dir public]
-set run_depot_user           <depot user>
-set depot_user               <depot user>
+set run_depot_user           ssumpf_test
+set depot_user               ssumpf_test
 set warn_strict 0

@@ -1,6 +1,6 @@
-<depot user>/api/base
-<depot user>/api/libc
-<depot user>/api/stdcxx
-<depot user>/api/zlib
-<depot user>/api/sdl2
-<depot user>/api/openal
+ssumpf_test/api/base
+ssumpf_test/api/libc
+ssumpf_test/api/stdcxx
+ssumpf_test/api/zlib
+ssumpf_test/api/sdl2
+ssumpf_test/api/openal
