@@ -115,9 +115,18 @@ index d42190f..afb2a2d 100644
  	set_target_properties(d3xp PROPERTIES INSTALL_NAME_DIR "@executable_path")
  	if (AROS)
 diff --git a/neo/sys/posix/posix_main.cpp b/neo/sys/posix/posix_main.cpp
-index 58c878f..ced415d 100644
+index 58c878f..3ba8f05 100644
 --- a/neo/sys/posix/posix_main.cpp
 +++ b/neo/sys/posix/posix_main.cpp
+@@ -270,7 +270,7 @@ TODO: OSX - use the native API instead? NSModule
+ =================
+ */
+ uintptr_t Sys_DLL_Load( const char *path ) {
+-	void* ret = dlopen( path, RTLD_NOW );
++	void* ret = dlopen( path, RTLD_NOW | RTLD_NODELETE);
+ 	if (ret == NULL) {
+ 		// dlopen() failed - this might be ok (we tried one possible path and the next will work)
+ 		// or it might be worth warning about (the lib existed but still couldn't be loaded,
 @@ -401,10 +401,12 @@ int Sys_GetDriveFreeSpace( const char *path ) {
  static const int   crashSigs[]     = {  SIGILL,   SIGABRT,   SIGFPE,   SIGSEGV };
  static const char* crashSigNames[] = { "SIGILL", "SIGABRT", "SIGFPE", "SIGSEGV" };

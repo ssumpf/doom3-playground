@@ -1,4 +1,4 @@
-<runtime ram="2G" caps="15000" binary="dhewm3">
+<runtime ram="2G" caps="20000" binary="dhewm3">
 	<requires>
 		<gui/>
 		<nic/>
@@ -10,8 +10,9 @@
 		<audio_out/>
 	</requires>
 
-	<config>
+	<config ld_verbose="yes">
 		<env key="HOME" value="/"/>
+		<env key="MESA_DEBUG" value="silent"/>
 		<libc stdout="/dev/log" stderr="/dev/log" rtc="/dev/rtc" socket="/socket"/>
 		<vfs>
 			<dir name="dev"><inline name="rtc">2021-09-30 00:00</inline>
