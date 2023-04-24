@@ -1,4 +1,4 @@
-<runtime ram="2G" caps="20000" binary="dhewm3">
+<runtime ram="2G" caps="5000" binary="dhewm3">
 	<requires>
 		<gui/>
 		<nic/>
