@@ -19,15 +19,19 @@ Building
 * run_depot_user           <depot user>
 * depot_user               <depot user>
 
-# Adjust used_apis
+# Change the <depot user> to your user
 
-* Change the <depot user> to your user
+# Adjust depot user in _used_apis_
 
-# Clone doom3 version of Genode and Genode world from
-  https://github.com/ssumpf/genode-world/tree/doom3
-  https://github.com/ssumpf/genode/tree/sculpt_<version>-doom3
-  where current version is:
-  https://github.com/ssumpf/genode/tree/sculpt_22.04-doom3
+# Adjust depot user in _pkg/doom3/archives
+
+# Checkout desired Sculpt release of Genode
+  ! git tags
+  will list available Sculpt releases
+
+# Clone doom3 version matching Sculpt release Genode world from
+  https://github.com/ssumpf/genode-world/tree/doom3-<Sculpt version>
+  (available: 23.04, 23.10)
 
 # Import the dhewm3 sources:
   ! goa import
